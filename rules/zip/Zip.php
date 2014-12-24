@@ -8,7 +8,7 @@
  * @charset UTF-8
  * @author mamiya_shou
  * @copylight mamiya_shou
- * @licence -
+ * @licence - MIT
  * @caution PHP 5 以上必須。
  *			郵便番号検索APIはリンクウェアのため、サイトにリンクを貼る必要がある。
  * @reference
