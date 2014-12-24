@@ -9,7 +9,7 @@
  * @author mamiya_shou
  * @copyright mamiya_shou
  * @license MIT License
- * @cation PHP 5.0 以上必須
+ * @caution PHP 5.0 以上必須
  */
 
 class Validate
