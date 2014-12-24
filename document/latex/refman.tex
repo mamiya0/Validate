@@ -1,0 +1,115 @@
+\documentclass[a4paper]{book}
+\usepackage{makeidx}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{ifthen}
+\usepackage[table]{xcolor}
+\usepackage{textcomp}
+\usepackage{alltt}
+\usepackage{ifpdf}
+\ifpdf
+\usepackage[pdftex,
+            pagebackref=true,
+            colorlinks=true,
+            linkcolor=blue,
+            unicode
+           ]{hyperref}
+\else
+\usepackage[ps2pdf,
+            pagebackref=true,
+            colorlinks=true,
+            linkcolor=blue,
+            unicode
+           ]{hyperref}
+\usepackage{pspicture}
+\fi
+\usepackage[utf8]{inputenc}
+\usepackage{mathptmx}
+\usepackage[scaled=.90]{helvet}
+\usepackage{courier}
+\usepackage{sectsty}
+\usepackage[titles]{tocloft}
+\usepackage{doxygen}
+\lstset{language=C++,inputencoding=utf8,basicstyle=\footnotesize,breaklines=true,breakatwhitespace=true,tabsize=8,numbers=left }
+\makeindex
+\setcounter{tocdepth}{3}
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\familydefault}{\sfdefault}
+\hfuzz=15pt
+\setlength{\emergencystretch}{15pt}
+\hbadness=750
+\tolerance=750
+\begin{document}
+\hypersetup{pageanchor=false,citecolor=blue}
+\begin{titlepage}
+\vspace*{7cm}
+\begin{center}
+{\Large \-Validate }\\
+\vspace*{1cm}
+{\large 作成： Doxygen 1.7.5.1}\\
+\vspace*{0.5cm}
+{\small Wed Oct 19 2011 18:19:55}\\
+\end{center}
+\end{titlepage}
+\clearemptydoublepage
+\pagenumbering{roman}
+\tableofcontents
+\clearemptydoublepage
+\pagenumbering{arabic}
+\hypersetup{pageanchor=true,citecolor=blue}
+\chapter{データ構造索引}
+\input{hierarchy}
+\chapter{データ構造索引}
+\input{annotated}
+\chapter{ファイル索引}
+\input{files}
+\chapter{データ構造}
+\input{class_rule_base}
+\input{class_rule_byte}
+\input{class_rule_comparison}
+\input{class_rule_credit}
+\input{class_rule_date}
+\input{class_rule_hiragana}
+\input{class_rule_integer}
+\input{class_rule_katakana}
+\input{class_rule_length}
+\input{class_rule_mail}
+\input{class_rule_multi}
+\input{class_rule_number}
+\input{class_rule_regular_expression}
+\input{class_rule_required}
+\input{class_rule_select}
+\input{class_rule_single}
+\input{class_rule_tel}
+\input{class_rule_time}
+\input{class_rule_zip}
+\input{class_validate}
+\input{class_zip}
+\chapter{ファイル}
+\input{base__rule_8php}
+\input{byte_8php}
+\input{comparison_8php}
+\input{credit_8php}
+\input{date_8php}
+\input{hiragana_8php}
+\input{integer_8php}
+\input{katakana_8php}
+\input{length_8php}
+\input{mail_8php}
+\input{multi_8php}
+\input{number_8php}
+\input{regular__expression_8php}
+\input{required_8php}
+\input{select_8php}
+\input{single_8php}
+\input{tel_8php}
+\input{time_8php}
+\input{zip_2_zip_8php}
+\input{_zip_8php}
+\input{validate_8php}
+\printindex
+\end{document}

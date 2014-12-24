@@ -1,0 +1,98 @@
+\hypertarget{class_rule_credit}{
+\section{クラス \-Rule\-Credit}
+\label{class_rule_credit}\index{\-Rule\-Credit@{\-Rule\-Credit}}
+}
+\-Rule\-Creditに対する継承グラフ\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_rule_credit}
+\end{center}
+\end{figure}
+\subsection*{\-Public メソッド}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_rule_credit_a095c5d389db211932136b53f25f39685}{\-\_\-\-\_\-construct} ()
+\item 
+\hyperlink{class_rule_credit_afb0fafe7e02a3ae1993c01c19fad2bae}{run} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Private メソッド}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_rule_credit_a21d9d90184acdbad763706adb6a15f1d}{\-\_\-check\-Digit} (\$credit)
+\end{DoxyCompactItemize}
+
+
+\subsection{説明}
+ルール：クレジットカード番号クラス
+
+\begin{DoxyVersion}{バージョン}
+1.\-0.\-0  \-U\-T\-F-\/8  2011/10/10  2011/10/19 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{作者}
+mamiya\-\_\-shou 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{\-Copyright}
+mamiya\-\_\-shou  \-M\-I\-T \-License  \-P\-H\-P 5.\-0 以上必須 
+\end{DoxyCopyright}
+
+
+\subsection{コンストラクタとデストラクタ}
+\hypertarget{class_rule_credit_a095c5d389db211932136b53f25f39685}{
+\index{\-Rule\-Credit@{\-Rule\-Credit}!\-\_\-\-\_\-construct@{\-\_\-\-\_\-construct}}
+\index{\-\_\-\-\_\-construct@{\-\_\-\-\_\-construct}!RuleCredit@{\-Rule\-Credit}}
+\subsubsection[{\-\_\-\-\_\-construct}]{\setlength{\rightskip}{0pt plus 5cm}\-\_\-\-\_\-construct (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_rule_credit_a095c5d389db211932136b53f25f39685}
+コンストラクタ
+
+public \begin{DoxyReturn}{戻り値}
+void 
+\end{DoxyReturn}
+
+
+\subsection{関数}
+\hypertarget{class_rule_credit_a21d9d90184acdbad763706adb6a15f1d}{
+\index{\-Rule\-Credit@{\-Rule\-Credit}!\-\_\-check\-Digit@{\-\_\-check\-Digit}}
+\index{\-\_\-check\-Digit@{\-\_\-check\-Digit}!RuleCredit@{\-Rule\-Credit}}
+\subsubsection[{\-\_\-check\-Digit}]{\setlength{\rightskip}{0pt plus 5cm}\-\_\-check\-Digit (
+\begin{DoxyParamCaption}
+\item[{\$}]{credit}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_rule_credit_a21d9d90184acdbad763706adb6a15f1d}
+クレジットカード番号を検査する
+
+
+\begin{DoxyParams}[1]{引数}
+string & {\em \$credit} & クレジットカード番号 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+boolean \-T\-R\-U\-E(\-O\-K) / \-F\-A\-L\-S\-E(\-N\-G)  \-Anatomy of \-Credit \-Card \-Numbers \href{http://www.merriampark.com/anatomycc.htm}{\tt http\-://www.\-merriampark.\-com/anatomycc.\-htm}  末尾から数えて偶数桁を2倍、その値が10を超える場合は9引く。 全ての値を合計し、10の倍数の場合、正しいクレジットカード番号。 
+\end{DoxyReturn}
+\hypertarget{class_rule_credit_afb0fafe7e02a3ae1993c01c19fad2bae}{
+\index{\-Rule\-Credit@{\-Rule\-Credit}!run@{run}}
+\index{run@{run}!RuleCredit@{\-Rule\-Credit}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_rule_credit_afb0fafe7e02a3ae1993c01c19fad2bae}
+バリデートする
+
+public \begin{DoxyReturn}{戻り値}
+boolean \-T\-R\-U\-E(\-O\-K) / string エラーメッセージ(\-N\-G)  未入力('')の場合は\-T\-R\-U\-Eを返す 
+\end{DoxyReturn}
+
+
+\hyperlink{class_rule_base_afb0fafe7e02a3ae1993c01c19fad2bae}{\-Rule\-Base}を再定義しています。
+
+
+
+このクラスの説明は次のファイルから生成されました\-:\begin{DoxyCompactItemize}
+\item 
+rules/\hyperlink{credit_8php}{credit.\-php}\end{DoxyCompactItemize}

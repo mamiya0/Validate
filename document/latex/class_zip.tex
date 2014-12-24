@@ -1,0 +1,135 @@
+\hypertarget{class_zip}{
+\section{クラス \-Zip}
+\label{class_zip}\index{\-Zip@{\-Zip}}
+}
+\subsection*{\-Public メソッド}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_zip_a095c5d389db211932136b53f25f39685}{\-\_\-\-\_\-construct} ()
+\item 
+\hyperlink{class_zip_a1b4e2431640c8db17a2891014cca7860}{search} (\$zip, \$is\-New=true)
+\end{DoxyCompactItemize}
+\subsection*{\-Private メソッド}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_zip_ac5d3ce0d7d41fdbdabcdd5e9bde7a521}{\-\_\-check\-Format\-New} (\&\$zip)
+\item 
+\hyperlink{class_zip_aa55051f7b8c754f92b414a6e1be66c09}{\-\_\-check\-Format\-Old} (\&\$zip)
+\item 
+\hyperlink{class_zip_ab38ef87cc1c3acd5d4c8ad5632691fc9}{\-\_\-get\-Csv\-All} (\$csv\-Path, \$to\-Enc=\hyperlink{zip_2_zip_8php_a04041db498ce35468b792db6570fe163}{\-D\-E\-S\-C\-\_\-\-C\-H\-A\-R\-S\-E\-T}, \$from\-Enc=\hyperlink{zip_2_zip_8php_a6917e80f882a8e319e4d9760052bc8c4}{\-S\-R\-C\-\_\-\-C\-H\-A\-R\-S\-E\-T})
+\end{DoxyCompactItemize}
+
+
+\subsection{コンストラクタとデストラクタ}
+\hypertarget{class_zip_a095c5d389db211932136b53f25f39685}{
+\index{\-Zip@{\-Zip}!\-\_\-\-\_\-construct@{\-\_\-\-\_\-construct}}
+\index{\-\_\-\-\_\-construct@{\-\_\-\-\_\-construct}!Zip@{\-Zip}}
+\subsubsection[{\-\_\-\-\_\-construct}]{\setlength{\rightskip}{0pt plus 5cm}\-\_\-\-\_\-construct (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_zip_a095c5d389db211932136b53f25f39685}
+コンストラクタ 
+
+\subsection{関数}
+\hypertarget{class_zip_ac5d3ce0d7d41fdbdabcdd5e9bde7a521}{
+\index{\-Zip@{\-Zip}!\-\_\-check\-Format\-New@{\-\_\-check\-Format\-New}}
+\index{\-\_\-check\-Format\-New@{\-\_\-check\-Format\-New}!Zip@{\-Zip}}
+\subsubsection[{\-\_\-check\-Format\-New}]{\setlength{\rightskip}{0pt plus 5cm}\-\_\-check\-Format\-New (
+\begin{DoxyParamCaption}
+\item[{\&\$}]{zip}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_zip_ac5d3ce0d7d41fdbdabcdd5e9bde7a521}
+郵便番号(現行)の形式をチェックする
+
+
+\begin{DoxyParams}[1]{引数}
+string & {\em \&\$zip} & 郵便番号 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+boolean true(\-O\-K) / false(\-N\-G)  郵便番号の形式は「半角数字7桁、または4文字目が区切り文字の8桁」 
+\end{DoxyReturn}
+\hypertarget{class_zip_aa55051f7b8c754f92b414a6e1be66c09}{
+\index{\-Zip@{\-Zip}!\-\_\-check\-Format\-Old@{\-\_\-check\-Format\-Old}}
+\index{\-\_\-check\-Format\-Old@{\-\_\-check\-Format\-Old}!Zip@{\-Zip}}
+\subsubsection[{\-\_\-check\-Format\-Old}]{\setlength{\rightskip}{0pt plus 5cm}\-\_\-check\-Format\-Old (
+\begin{DoxyParamCaption}
+\item[{\&\$}]{zip}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_zip_aa55051f7b8c754f92b414a6e1be66c09}
+郵便番号(旧式)の形式をチェックする
+
+
+\begin{DoxyParams}[1]{引数}
+string & {\em \&\$zip} & 郵便番号 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+boolean true(\-O\-K) / false(\-N\-G)  郵便番号の形式は「半角数字3桁、または5桁」 
+\end{DoxyReturn}
+\hypertarget{class_zip_ab38ef87cc1c3acd5d4c8ad5632691fc9}{
+\index{\-Zip@{\-Zip}!\-\_\-get\-Csv\-All@{\-\_\-get\-Csv\-All}}
+\index{\-\_\-get\-Csv\-All@{\-\_\-get\-Csv\-All}!Zip@{\-Zip}}
+\subsubsection[{\-\_\-get\-Csv\-All}]{\setlength{\rightskip}{0pt plus 5cm}\-\_\-get\-Csv\-All (
+\begin{DoxyParamCaption}
+\item[{\$}]{csv\-Path, }
+\item[{\$}]{to\-Enc = {\ttfamily {\bf \-D\-E\-S\-C\-\_\-\-C\-H\-A\-R\-S\-E\-T}}, }
+\item[{\$}]{from\-Enc = {\ttfamily {\bf \-S\-R\-C\-\_\-\-C\-H\-A\-R\-S\-E\-T}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}
+\label{class_zip_ab38ef87cc1c3acd5d4c8ad5632691fc9}
+\-C\-S\-Vファイルから全情報を読み取る
+
+
+\begin{DoxyParams}[1]{引数}
+string & {\em \$csv\-Path} & \-C\-S\-Vファイルパス \\
+\hline
+string & {\em \$to\-Enc} & 変換先の文字コード \\
+\hline
+string & {\em \$from\-Enc} & 変換元の文字コード \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+array object 結果オブジェクト配列(\-O\-K) / \-F\-A\-L\-S\-E(\-N\-G)
+\end{DoxyReturn}
+\mbox{[}検索結果情報\mbox{]}
+\begin{DoxyItemize}
+\item 成功時 \mbox{[}name\mbox{]}=$>$ アプリケーション名称 \mbox{[}version\mbox{]}=$>$ アプリケーションのバージョン \mbox{[}request\-\_\-url\mbox{]}=$>$ リクエスト\-U\-R\-L \mbox{[}request\-\_\-zip\-\_\-num\mbox{]}=$>$ リクエストされた郵便番号 \mbox{[}request\-\_\-zip\-\_\-version\mbox{]}=$>$リクエストされた郵便番号形式(0 = 7桁, 1 = 3 or 5桁, なし = none) \mbox{[}result\-\_\-code\mbox{]}=$>$ 結果コード(正常時 = 1, エラー時 = 0) \mbox{[}result\-\_\-zip\-\_\-num\mbox{]}=$>$ 検索した郵便番号 \mbox{[}result\-\_\-zip\-\_\-version\mbox{]}=$>$ 検索した郵便番号形式(0 = 7桁, 1 = 3 or 5桁) \mbox{[}result\-\_\-values\-\_\-count\mbox{]}=$>$該当した住所情報の数。 (追加情報) \mbox{[}try\-Cnt\mbox{]}=$>$ 試行回数 \mbox{[}load\-Time\mbox{]}=$>$ 読み込み時間(マイクロ秒)
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item 失敗時(count\-:8) \mbox{[}name\mbox{]}=$>$ アプリケーション名称 \mbox{[}version\mbox{]}=$>$ アプリケーションのバージョン \mbox{[}request\-\_\-url\mbox{]}=$>$ リクエスト\-U\-R\-L \mbox{[}request\-\_\-zip\-\_\-num\mbox{]}=$>$ リクエストされた郵便番号 \mbox{[}request\-\_\-zip\-\_\-version\mbox{]}=$>$リクエストされた郵便番号形式(0 = 7桁, 1 = 3 or 5桁, なし = none) \mbox{[}result\-\_\-code\mbox{]}=$>$ 結果コード(正常時 = 1, エラー時 = 0) \mbox{[}error\-\_\-code\mbox{]}=$>$ エラーコード \mbox{[}error\-\_\-note\mbox{]}=$>$ エラー内容
+\end{DoxyItemize}
+
+\mbox{[}住所情報\mbox{]}：ヒットした場合 \mbox{[}state\-\_\-kana\mbox{]}=$>$ 都道府県カナ \mbox{[}city\-\_\-kana\mbox{]}=$>$ 市区町村カナ \mbox{[}address\-\_\-kana\mbox{]}=$>$ 住所カナ \mbox{[}company\-\_\-kana\mbox{]}=$>$ 事業所カナ \mbox{[}state\mbox{]}=$>$ \char`\"{}熊本県\char`\"{} 都道府県 \mbox{[}city\mbox{]}=$>$ \char`\"{}八代市\char`\"{} 市区町村 \mbox{[}address\mbox{]}=$>$ 住所 \mbox{[}company\mbox{]}=$>$ 事業所 (※該当情報が存在しない場合、「none」がセットされます。) \hypertarget{class_zip_a1b4e2431640c8db17a2891014cca7860}{
+\index{\-Zip@{\-Zip}!search@{search}}
+\index{search@{search}!Zip@{\-Zip}}
+\subsubsection[{search}]{\setlength{\rightskip}{0pt plus 5cm}search (
+\begin{DoxyParamCaption}
+\item[{\$}]{zip, }
+\item[{\$}]{is\-New = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}}
+\label{class_zip_a1b4e2431640c8db17a2891014cca7860}
+郵便番号検索を行う
+
+
+\begin{DoxyParams}[1]{引数}
+string & {\em \$zip} & 郵便番号 \\
+\hline
+boolean & {\em \$is\-New} & true \-:現行郵便番号(7桁) false \-:旧式郵便番号(3桁 or 5桁) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+boolean 結果オブジェクト配列(\-O\-K) / \-F\-A\-L\-S\-E(\-N\-G) 
+\end{DoxyReturn}
+
+
+このクラスの説明は次のファイルから生成されました\-:\begin{DoxyCompactItemize}
+\item 
+rules/zip/\hyperlink{zip_2_zip_8php}{\-Zip.\-php}\end{DoxyCompactItemize}
