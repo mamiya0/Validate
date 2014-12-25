@@ -1,73 +1,148 @@
-\documentclass[a4paper]{book}
-\usepackage{makeidx}
-\usepackage{natbib}
+\documentclass[twoside]{book}
+
+% Packages required by doxygen
+\usepackage{fixltx2e}
+\usepackage{calc}
+\usepackage{doxygen}
 \usepackage{graphicx}
-\usepackage{multicol}
-\usepackage{float}
-\usepackage{listings}
-\usepackage{color}
-\usepackage{ifthen}
-\usepackage[table]{xcolor}
-\usepackage{textcomp}
-\usepackage{alltt}
-\usepackage{ifpdf}
-\ifpdf
-\usepackage[pdftex,
-            pagebackref=true,
-            colorlinks=true,
-            linkcolor=blue,
-            unicode
-           ]{hyperref}
-\else
-\usepackage[ps2pdf,
-            pagebackref=true,
-            colorlinks=true,
-            linkcolor=blue,
-            unicode
-           ]{hyperref}
-\usepackage{pspicture}
-\fi
 \usepackage[utf8]{inputenc}
+\usepackage{makeidx}
+\usepackage{multicol}
+\usepackage{multirow}
+\PassOptionsToPackage{warn}{textcomp}
+\usepackage{textcomp}
+\usepackage[nointegrals]{wasysym}
+\usepackage[table]{xcolor}
+
+% Font selection
+\usepackage[T1]{fontenc}
 \usepackage{mathptmx}
 \usepackage[scaled=.90]{helvet}
 \usepackage{courier}
+\usepackage{amssymb}
 \usepackage{sectsty}
-\usepackage[titles]{tocloft}
-\usepackage{doxygen}
-\lstset{language=C++,inputencoding=utf8,basicstyle=\footnotesize,breaklines=true,breakatwhitespace=true,tabsize=8,numbers=left }
-\makeindex
-\setcounter{tocdepth}{3}
-\renewcommand{\footrulewidth}{0.4pt}
 \renewcommand{\familydefault}{\sfdefault}
-\hfuzz=15pt
-\setlength{\emergencystretch}{15pt}
-\hbadness=750
+\allsectionsfont{%
+  \fontseries{bc}\selectfont%
+  \color{darkgray}%
+}
+\renewcommand{\DoxyLabelFont}{%
+  \fontseries{bc}\selectfont%
+  \color{darkgray}%
+}
+\newcommand{\+}{\discretionary{\mbox{\scriptsize$\hookleftarrow$}}{}{}}
+
+% Page & text layout
+\usepackage{geometry}
+\geometry{%
+  a4paper,%
+  top=2.5cm,%
+  bottom=2.5cm,%
+  left=2.5cm,%
+  right=2.5cm%
+}
 \tolerance=750
+\hfuzz=15pt
+\hbadness=750
+\setlength{\emergencystretch}{15pt}
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{0.2cm}
+\makeatletter
+\renewcommand{\paragraph}{%
+  \@startsection{paragraph}{4}{0ex}{-1.0ex}{1.0ex}{%
+    \normalfont\normalsize\bfseries\SS@parafont%
+  }%
+}
+\renewcommand{\subparagraph}{%
+  \@startsection{subparagraph}{5}{0ex}{-1.0ex}{1.0ex}{%
+    \normalfont\normalsize\bfseries\SS@subparafont%
+  }%
+}
+\makeatother
+
+% Headers & footers
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+\fancyhead[LE]{\fancyplain{}{\bfseries\thepage}}
+\fancyhead[CE]{\fancyplain{}{}}
+\fancyhead[RE]{\fancyplain{}{\bfseries\leftmark}}
+\fancyhead[LO]{\fancyplain{}{\bfseries\rightmark}}
+\fancyhead[CO]{\fancyplain{}{}}
+\fancyhead[RO]{\fancyplain{}{\bfseries\thepage}}
+\fancyfoot[LE]{\fancyplain{}{}}
+\fancyfoot[CE]{\fancyplain{}{}}
+\fancyfoot[RE]{\fancyplain{}{\bfseries\scriptsize 2014年12月25日(木) 15時07分25秒作成 -\/ Validate / 構成\+:  Doxygen }}
+\fancyfoot[LO]{\fancyplain{}{\bfseries\scriptsize 2014年12月25日(木) 15時07分25秒作成 -\/ Validate / 構成\+:  Doxygen }}
+\fancyfoot[CO]{\fancyplain{}{}}
+\fancyfoot[RO]{\fancyplain{}{}}
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\chaptermark}[1]{%
+  \markboth{#1}{}%
+}
+\renewcommand{\sectionmark}[1]{%
+  \markright{\thesection\ #1}%
+}
+
+% Indices & bibliography
+\usepackage{natbib}
+\usepackage[titles]{tocloft}
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{5}
+\makeindex
+
+% Hyperlinks (required, but should be loaded last)
+\usepackage{ifpdf}
+\ifpdf
+  \usepackage[pdftex,pagebackref=true]{hyperref}
+\else
+  \usepackage[ps2pdf,pagebackref=true]{hyperref}
+\fi
+\hypersetup{%
+  colorlinks=true,%
+  linkcolor=blue,%
+  citecolor=blue,%
+  unicode%
+}
+
+% Custom commands
+\newcommand{\clearemptydoublepage}{%
+  \newpage{\pagestyle{empty}\cleardoublepage}%
+}
+
+
+%===== C O N T E N T S =====
+
 \begin{document}
-\hypersetup{pageanchor=false,citecolor=blue}
+
+% Titlepage & ToC
+\hypersetup{pageanchor=false,
+             bookmarks=true,
+             bookmarksnumbered=true,
+             pdfencoding=unicode
+            }
+\pagenumbering{roman}
 \begin{titlepage}
 \vspace*{7cm}
-\begin{center}
-{\Large \-Validate }\\
+\begin{center}%
+{\Large Validate }\\
 \vspace*{1cm}
-{\large 作成： Doxygen 1.7.5.1}\\
+{\large 構築\+: Doxygen 1.8.8}\\
 \vspace*{0.5cm}
-{\small Wed Oct 19 2011 18:19:55}\\
+{\small 2014年12月25日(木) 15時07分25秒}\\
 \end{center}
 \end{titlepage}
 \clearemptydoublepage
-\pagenumbering{roman}
 \tableofcontents
 \clearemptydoublepage
 \pagenumbering{arabic}
-\hypersetup{pageanchor=true,citecolor=blue}
-\chapter{データ構造索引}
+\hypersetup{pageanchor=true}
+
+%--- Begin generated contents ---
+\chapter{階層索引}
 \input{hierarchy}
 \chapter{データ構造索引}
 \input{annotated}
-\chapter{ファイル索引}
-\input{files}
-\chapter{データ構造}
+\chapter{データ構造詳解}
 \input{class_rule_base}
 \input{class_rule_byte}
 \input{class_rule_comparison}
@@ -89,27 +164,12 @@
 \input{class_rule_zip}
 \input{class_validate}
 \input{class_zip}
-\chapter{ファイル}
-\input{base__rule_8php}
-\input{byte_8php}
-\input{comparison_8php}
-\input{credit_8php}
-\input{date_8php}
-\input{hiragana_8php}
-\input{integer_8php}
-\input{katakana_8php}
-\input{length_8php}
-\input{mail_8php}
-\input{multi_8php}
-\input{number_8php}
-\input{regular__expression_8php}
-\input{required_8php}
-\input{select_8php}
-\input{single_8php}
-\input{tel_8php}
-\input{time_8php}
-\input{zip_2_zip_8php}
-\input{_zip_8php}
-\input{validate_8php}
+%--- End generated contents ---
+
+% Index
+\newpage
+\phantomsection
+\addcontentsline{toc}{chapter}{索引}
 \printindex
+
 \end{document}
