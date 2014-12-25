@@ -60,8 +60,7 @@ class RuleZip extends RuleBase
 		if ($this->infos === TRUE && file_exists($zipPath)) {
 			// 郵便番号クラスを読み込む
 			require_once($zipPath);
-			$zip = new Zip();
-			$objects = $zip->search($value);
+			$objects = Zip::search($value);
 			// 郵便番号が存在した場合
 			if ((int)$objects[0]->result_values_count > 0) {
 				return TRUE;
